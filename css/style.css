@@ -821,7 +821,6 @@ table {
   align-items: center;
   flex-direction: column;
   opacity: 0;
-  transition: opacity 0.5s;
 }
 .member .inner .member_profile-box .member_profile:hover .member_text {
   opacity: 1;
