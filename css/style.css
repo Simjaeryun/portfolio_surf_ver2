@@ -103,7 +103,7 @@ table {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  padding: 0px 60px;
+  padding-left: 60px;
 }
 #visual figure .inner .visual_txt {
   position: absolute;
@@ -145,6 +145,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 15px;
 }
 #visual figure .inner .visual_column_txt span {
   font-size: 12px;
@@ -304,26 +305,28 @@ table {
   justify-content: center;
   font-size: 12px;
   font-family: "Noto Sans", sans-serif;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   transform: rotate(180deg);
+  margin-right: 20px;
 }
 #technology figure .inner .wrap .tec_column_txt span {
   writing-mode: vertical-lr;
   text-align: center;
 }
 #technology figure .inner .wrap video {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   margin-left: 10px;
   filter: grayscale(1);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  transform: rotateY(180deg);
 }
 #technology figure .inner .wrap .tec_txt {
   background: #fff;
   position: absolute;
-  width: 350px;
-  height: 400px;
+  width: 400px;
+  height: 450px;
   top: 50%;
   transform: translateY(-50%);
   right: 0px;
@@ -546,7 +549,6 @@ table {
 
 .content {
   width: 100%;
-  height: 85vh;
 }
 .content .inner {
   width: 1180px;
@@ -758,103 +760,39 @@ table {
     display: none;
   }
 }
-.department .sub_visual {
-  background: url(../img/brand4.jpg) no-repeat center/cover;
-}
-.department .division {
+.member {
   width: 100%;
-  height: 600px;
-  background: url(../img/bgDIvision.jpg) no-repeat center/contain;
+  height: 100%;
 }
-.department .division .div_tree {
-  position: absolute;
-  top: -9999px;
-  opacity: 0;
-  transition: opacity 1s;
+.member .member_banner {
+  width: 100%;
+  height: 80vh;
+  background: url("../img/member_banner2.jpg") no-repeat center/cover fixed;
 }
-.department .division .div_tree li span {
-  display: block;
-  width: 40%;
-  height: 50px;
-  background: #111;
-  font: bold 13px/50px "arial";
-  color: #fff;
-  text-align: center;
-  border-radius: 25px;
-  margin-bottom: 20px;
-  position: relative;
+.member .inner {
+  width: 1180px;
+  margin: 0 auto;
 }
-.department .division .div_tree li span::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 1165px;
-  background: #aaa;
-  position: absolute;
-  top: 50px;
-  left: 50px;
+.member .inner .member_profile-box {
+  width: 100%;
 }
-.department .division .div_tree li ul li span {
-  background: #666;
-  transform: translateX(70px);
+.member .inner .member_profile-box .member_profile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
-.department .division .div_tree li ul li span::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 1px;
-  background: #aaa;
-  position: absolute;
-  top: 50%;
-  left: -20px;
+.member .inner .member_profile-box .member_profile .member_img {
+  width: 400px;
+  height: 400px;
 }
-.department .division .div_tree li ul li:nth-of-type(1) span::after {
-  display: none;
-}
-.department .division .div_tree li ul li:nth-of-type(2) span::after {
-  display: none;
-}
-.department .division .div_tree li ul li:nth-of-type(3) span::after {
-  height: 115px;
-}
-.department .division .div_tree li ul li:nth-of-type(4) span::after {
-  height: 185px;
-}
-.department .division .div_tree li ul li:nth-of-type(5) span::after {
-  height: 115px;
-}
-.department .division .div_tree li ul li:nth-of-type(6) span::after {
-  height: 185px;
-}
-.department .division .div_tree li ul li:nth-of-type(7) span::after {
-  height: 115px;
-}
-.department .division .div_tree li ul li ul li span {
-  background: #999;
-  transform: translateX(140px);
-}
-.department .division .div_tree li ul li ul li span::after {
-  display: none;
+.member .inner .member_profile-box .member_profile .member_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/*tablet ------------------------------*/
-@media screen and (max-width: 1170px) {
-  .department .division {
-    height: 60vw;
-  }
-}
-/*mobile ------------------------------*/
-@media screen and (max-width: 539px) {
-  .department .division {
-    background: none;
-    height: auto;
-  }
-  .department .division .div_tree {
-    position: relative;
-    top: 0;
-    opacity: 1;
-  }
-}
 #gallery {
   width: 100%;
   height: 100%;
