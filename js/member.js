@@ -1,7 +1,6 @@
 const frame = document.querySelector(".member_profile-box");
 
 
-
 fetch('data/member.json')
     .then(data => {
         return data.json();
@@ -27,9 +26,22 @@ fetch('data/member.json')
                                     ${member.info}
                                 </p>
                             </div>
-            
                         </article>
                         `
         })
         frame.innerHTML = tags;
+        const imgs = frame.querySelectorAll("img");
+        const len = imgs.length;
+        let count = 0;
+        for (let el of imgs) {
+            el.onload = () => {
+                count++;
+                if (count === len) {
+
+                    frame.classList.add("on")
+                }
+            }
+        }
     })
+
+

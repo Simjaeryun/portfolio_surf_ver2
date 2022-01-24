@@ -16,9 +16,13 @@
 		}
 		.member_profile-box {
 			width: 100%;
-			display: flex;
+
 			flex-wrap: wrap;
 			justify-content: space-between;
+			display: none;
+			&.on {
+				display: flex;
+			}
 			.member_profile {
 				position: relative;
 				width: 30%;
