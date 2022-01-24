@@ -14,6 +14,21 @@
             "name": "Tom",
             "position": "Surfing coach",
             "pic": "img/member3.jpg"
+        },
+        {
+            "name": "David",
+            "position": "CEO",
+            "pic": "img/member4.jpg"
+        },
+        {
+            "name": "Emma",
+            "position": "Surfing coach",
+            "pic": "img/member5.jpg"
+        },
+        {
+            "name": "Tom",
+            "position": "Surfing coach",
+            "pic": "img/member6.jpg"
         }
     ]
 }
