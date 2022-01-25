@@ -18,12 +18,12 @@ fetch(url)
         items.map(item => {
             let title = item.snippet.title
             if (title.length > 30) {
-                title = title.substr(0, 30) + "..."
+                title = title.substr(0, 50) + "..."
             }
 
             let con = item.snippet.description
             if (con.length > 100) {
-                con = con.substr(0, 100) + "..."
+                con = con.substr(0, 200) + "..."
             }
 
             let date = item.snippet.publishedAt;
@@ -33,6 +33,15 @@ fetch(url)
                     <a href="${item.snippet.resourceId.videoId}" class="pic">
                         <img src="${item.snippet.thumbnails.maxres.url}" alt="">
                     </a>
+                    <div class="vidList_title">
+                        ${title}
+                    </div>
+                    <p class="vidList_text">
+                        ${con}
+                    </p>
+                    <span class="vidList_date">
+                        ${date}
+                    </span>
                  </article>
             `
         })
