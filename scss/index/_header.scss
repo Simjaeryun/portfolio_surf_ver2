@@ -66,12 +66,15 @@
 			}
 		}
 		.header_status {
+			display: flex;
 			a {
+				margin-left: 10px;
 				display: block;
-				border: 3px solid aqua;
 				padding: 5px 20px;
-				color: #000;
-				font-family: "Noto Sans", sans-serif;
+				color: #fff;
+				font-family: "Lalezar", cursive;
+				font-size: 20px;
+				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 			}
 		}
 	}
