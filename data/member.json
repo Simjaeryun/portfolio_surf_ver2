@@ -2,33 +2,39 @@
     "data": [
         {
             "name": "David",
-            "position": "CEO",
-            "pic": "img/member1.jpg"
+            "position": "Designer",
+            "pic": "img/member1.jpg",
+            "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dolor, eos sed quas nostrum molestias laborum mollitia. Illum vel temporibus molestias vitae doloribus, excepturi voluptatem eius officiis, enim nulla quaerat?"
         },
         {
             "name": "Emma",
             "position": "Surfing coach",
-            "pic": "img/member2.jpg"
+            "pic": "img/member2.jpg",
+            "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dolor, eos sed quas nostrum molestias laborum mollitia. Illum vel temporibus molestias vitae doloribus, "
         },
         {
             "name": "Tom",
             "position": "Surfing coach",
-            "pic": "img/member3.jpg"
+            "pic": "img/member3.jpg",
+            "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dolor, eos sed quas nostrum molestias laborum mollitia. Illum vel temporibus molestias vitae doloribus, "
         },
         {
             "name": "David",
-            "position": "CEO",
-            "pic": "img/member4.jpg"
+            "position": "Designer",
+            "pic": "img/member4.jpg",
+            "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dolor, eos sed quas nostrum molestias laborum mollitia. Illum vel temporibus molestias vitae doloribus, "
         },
         {
             "name": "Emma",
             "position": "Surfing coach",
-            "pic": "img/member5.jpg"
+            "pic": "img/member5.jpg",
+            "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dolor, eos sed quas nostrum molestias laborum mollitia. Illum vel temporibus molestias vitae doloribus, "
         },
         {
             "name": "Tom",
             "position": "Surfing coach",
-            "pic": "img/member6.jpg"
+            "pic": "img/member6.jpg",
+            "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex dolor, eos sed quas nostrum molestias laborum mollitia. Illum vel temporibus molestias vitae doloribus, "
         }
     ]
 }

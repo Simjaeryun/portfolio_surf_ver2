@@ -936,7 +936,7 @@ table {
   width: 100%;
   height: 50vh;
   display: flex;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
 }
 .member .inner .member_ceo .member_ceo_img {
   width: 30%;
@@ -950,14 +950,20 @@ table {
   justify-content: space-between;
   width: 70%;
   padding-left: 50px;
+  padding-right: 100px;
   font-size: 30px;
 }
 .member .inner .member_ceo .member_ceo_txt .member_ceo_name {
   font-size: 60px;
-  margin-bottom: 3vh;
 }
 .member .inner .member_ceo .member_ceo_txt .member_ceo_awards a {
+  color: #666;
   display: block;
+}
+.member .inner h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 50px;
 }
 .member .inner .member_profile-box {
   width: 100%;
@@ -1000,18 +1006,23 @@ table {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   opacity: 0;
+}
+.member .inner .member_profile-box .member_profile .member_text .member_name {
+  font-size: 50px;
+}
+.member .inner .member_profile-box .member_profile .member_text .member_position {
+  font-size: 40px;
+}
+.member .inner .member_profile-box .member_profile .member_text .member_info {
+  padding: 20px;
+  font-size: 18px;
 }
 .member .inner .member_profile-box .member_profile:hover .member_text {
   opacity: 1;
 }
 
-@media screen and (max-width: 1220px) {
-  .member .inner {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
 @media screen and (max-width: 1170px) {
   .member {
     width: 100%;
@@ -1020,13 +1031,80 @@ table {
   .member .member_banner {
     width: 100%;
     height: 45vh;
-    background: url("../img/member_banner7.jpg") no-repeat center/cover;
+  }
+  .member .inner {
+    width: 100%;
+    margin: 0 auto;
   }
   .member .inner h1 {
     text-align: center;
   }
-  .member .inner .member_profile-box {
-    justify-content: space-around;
+  .member .inner .member_ceo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .member .inner .member_ceo .member_ceo_img {
+    min-width: 380px;
+    min-height: 380px;
+    width: 40%;
+    height: 40%;
+  }
+  .member .inner .member_ceo .member_ceo_txt {
+    text-align: center;
+    height: 30%;
+    font-size: 20px;
+  }
+  .member .inner .member_ceo .member_ceo_txt .member_ceo_awards {
+    margin-top: 30px;
+  }
+  .member .inner h2 {
+    text-align: center;
+  }
+  .member .inner .member_profile-box .member_profile {
+    position: relative;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .member .inner .member_profile-box .member_profile .member_img {
+    width: 100%;
+    height: 100%;
+  }
+  .member .inner .member_profile-box .member_profile .member_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  .member .inner .member_profile-box .member_profile .member_text {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+  }
+  .member .inner .member_profile-box .member_profile .member_text .member_name {
+    font-size: 50px;
+  }
+  .member .inner .member_profile-box .member_profile .member_text .member_position {
+    font-size: 40px;
+  }
+  .member .inner .member_profile-box .member_profile .member_text .member_info {
+    display: none;
   }
 }
 #gallery {

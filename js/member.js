@@ -6,7 +6,6 @@ fetch('data/member.json')
         return data.json();
     })
     .then(json => {
-        console.log(json)
         const data = json.data;
         let tags = "";
         data.map(member => {
