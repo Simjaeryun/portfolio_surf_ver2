@@ -78,28 +78,24 @@ table {
   font-size: 20px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-#header .inner .header_nav #gnb li a:hover::before {
+#header .inner .header_nav #gnb li a:hover::after {
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
-  background: url("../img/header_icon.png");
-  background-size: cover;
+  width: 100%;
+  height: 2px;
+  background: aqua;
   position: absolute;
-  top: -35px;
-  left: calc(50% - 15px);
+  bottom: 0px;
   z-index: 12;
 }
 #header .inner .header_nav #gnb li a.on::before {
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
-  background: url("../img/header_icon.png");
-  background-size: cover;
+  width: 100%;
+  height: 2px;
+  background: aqua;
   position: absolute;
-  top: -35px;
-  left: calc(50% - 15px);
+  bottom: 0px;
   z-index: 12;
 }
 #header .inner .header_status {
@@ -574,28 +570,24 @@ table {
   font-size: 20px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-#header_sub .inner .header_sub_nav #gnb li a.on::before {
+#header_sub .inner .header_sub_nav #gnb li a:hover::after {
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
-  background: url("../img/header_icon.png");
-  background-size: cover;
+  width: 100%;
+  height: 2px;
+  background: aqua;
   position: absolute;
-  top: -35px;
-  left: calc(50% - 15px);
+  bottom: 0px;
   z-index: 12;
 }
-#header_sub .inner .header_sub_nav #gnb li a:hover::before {
+#header_sub .inner .header_sub_nav #gnb li a.on::after {
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
-  background: url("../img/header_icon.png");
-  background-size: cover;
+  width: 100%;
+  height: 2px;
+  background: aqua;
   position: absolute;
-  top: -35px;
-  left: calc(50% - 15px);
+  bottom: 0px;
   z-index: 12;
 }
 #header_sub .inner .header_sub_status {
@@ -938,20 +930,56 @@ table {
   width: 1180px;
   margin: 0 auto;
 }
-.member .inner h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.member .inner .member_title {
+  margin-top: 100px;
+  margin-bottom: 70px;
   font-size: 50px;
+  text-align: center;
+  color: #000;
+}
+.member .inner .member_title:first-child {
+  text-align: center;
+}
+.member .inner .member_about {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  border-bottom: 2px solid #bbb;
+}
+.member .inner .member_about .member_about_img {
+  width: 70%;
+  text-align: end;
+}
+.member .inner .member_about .member_about_img img {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+}
+.member .inner .member_about .member_about_text {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.member .inner .member_about .member_about_text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.member .inner .member_about .member_about_text p {
+  font-size: 20px;
 }
 .member .inner .member_ceo {
   width: 100%;
-  height: 50vh;
   display: flex;
-  margin-bottom: 10vh;
+  align-items: center;
+  padding-bottom: 100px;
+  border-bottom: 2px solid #bbb;
 }
 .member .inner .member_ceo .member_ceo_img {
   width: 30%;
-  height: 100%;
+  height: 65vh;
   border-radius: 10px;
   background: url(../img/member_ceo.jpg) center/cover;
 }
@@ -966,15 +994,14 @@ table {
 }
 .member .inner .member_ceo .member_ceo_txt .member_ceo_name {
   font-size: 60px;
+  margin-bottom: 30px;
+}
+.member .inner .member_ceo .member_ceo_txt .member_ceo_awards {
+  margin-top: 30px;
 }
 .member .inner .member_ceo .member_ceo_txt .member_ceo_awards a {
   color: #666;
   display: block;
-}
-.member .inner h2 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 50px;
 }
 .member .inner .member_profile-box {
   width: 100%;
@@ -1437,82 +1464,6 @@ table {
     margin-bottom: 10px;
   }
 }
-.youtube_body {
-  background: url(../img/test.jpg);
-  background-position: center;
-  background-size: cover;
-}
-.youtube_body .content {
-  width: 100%;
-  height: 85vh;
-  padding-top: 100px;
-}
-.youtube_body .content .inner {
-  width: 1180px;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.youtube_body .content .inner .vidList {
-  width: 100%;
-}
-.youtube_body .content .inner .vidList article {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-}
-.youtube_body .content .inner .vidList article .pic {
-  display: block;
-  width: 100%;
-  height: 60%;
-  margin-bottom: 30px;
-}
-.youtube_body .content .inner .vidList article .pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-.youtube_body .content .inner h1 {
-  font: normal 50px/1 "arial";
-  color: #fff;
-  text-align: center;
-}
-.youtube_body .content .inner h1 span {
-  font: normal 20px/1 "맑은 고딕";
-  color: #aaa;
-}
-.youtube_body .content .inner h1 span::before {
-  content: "/";
-  margin-right: 20px;
-  margin-left: 10px;
-}
-.youtube_body figure.pop {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  padding: 5vw;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background: rgba(0, 0, 0, 0.7);
-}
-.youtube_body figure.pop iframe {
-  width: 100%;
-  height: 100%;
-}
-.youtube_body figure.pop .btnClose {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  color: #fff;
-}
-
 body {
   overflow-x: hidden;
 }
