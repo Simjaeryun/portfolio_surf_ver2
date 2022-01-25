@@ -932,6 +932,33 @@ table {
   margin-bottom: 50px;
   font-size: 50px;
 }
+.member .inner .member_ceo {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  margin-bottom: 20vh;
+}
+.member .inner .member_ceo .member_ceo_img {
+  width: 30%;
+  height: 100%;
+  border-radius: 10px;
+  background: url(../img/member_ceo.jpg) center/cover;
+}
+.member .inner .member_ceo .member_ceo_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  padding-left: 50px;
+  font-size: 30px;
+}
+.member .inner .member_ceo .member_ceo_txt .member_ceo_name {
+  font-size: 60px;
+  margin-bottom: 3vh;
+}
+.member .inner .member_ceo .member_ceo_txt .member_ceo_awards a {
+  display: block;
+}
 .member .inner .member_profile-box {
   width: 100%;
   flex-wrap: wrap;

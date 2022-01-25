@@ -14,6 +14,35 @@
 			margin-bottom: 50px;
 			font-size: 50px;
 		}
+		.member_ceo {
+			width: 100%;
+			height: 50vh;
+			display: flex;
+			margin-bottom: 20vh;
+			.member_ceo_img {
+				width: 30%;
+				height: 100%;
+				border-radius: 10px;
+				background: url(../img/member_ceo.jpg) center/cover;
+			}
+			.member_ceo_txt {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 70%;
+				padding-left: 50px;
+				font-size: 30px;
+				.member_ceo_name {
+					font-size: 60px;
+					margin-bottom: 3vh;
+				}
+				.member_ceo_awards {
+					a {
+						display: block;
+					}
+				}
+			}
+		}
 		.member_profile-box {
 			width: 100%;
 			flex-wrap: wrap;
