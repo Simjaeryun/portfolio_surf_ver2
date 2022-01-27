@@ -1282,6 +1282,8 @@ table {
 .member .inner .member_about .member_about_text p {
   font-size: 20px;
   line-height: 27px;
+  font-family: "poppins";
+  font-weight: bold;
 }
 .member .inner .member_ceo {
   width: 100%;
@@ -1304,6 +1306,9 @@ table {
   padding-left: 50px;
   padding-right: 100px;
   font-size: 30px;
+  font-family: "poppins";
+  font-weight: bold;
+  line-height: 45px;
 }
 .member .inner .member_ceo .member_ceo_txt .member_ceo_name {
   font-size: 60px;
