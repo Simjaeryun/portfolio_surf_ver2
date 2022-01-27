@@ -1,6 +1,6 @@
-const gallery = document.querySelector("#gallery")
-const galleryWrap = document.querySelector("#gallery .wrap")
-const galList = document.querySelector("#gallery .wrap .list");
+const gallery = document.querySelector(".gallery")
+const galleryWrap = document.querySelector(".gallery .wrap")
+const galList = document.querySelector(".gallery .wrap .list");
 const key = "f7cfb698e2ac45b786af0b554ec7cd09";
 const flickr_base = "https://www.flickr.com/services/rest/?";
 const method1 = "flickr.interestingness.getList";
@@ -87,8 +87,8 @@ function createList(items) {
          `;
     })
     galList.innerHTML = htmls;
-    gallery.append(prevBtn);
-    gallery.append(nextBtn)
+    //gallery.append(prevBtn);
+    //gallery.append(nextBtn)
 }
 
 // 이미지 클릭시 popup창 생성

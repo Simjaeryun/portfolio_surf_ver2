@@ -826,7 +826,9 @@ table {
   width: 100%;
   height: 15vh;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
 }
 #header_sub .inner {
   margin: auto;
@@ -898,7 +900,18 @@ table {
 
 .content {
   width: 100%;
-  padding-top: 15vh;
+}
+.content .content_banner {
+  width: 100%;
+  height: 75vh;
+  filter: grayscale(1);
+}
+.content h1 {
+  font-size: 70px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: "Lalezar", cursive;
 }
 .content .inner {
   width: 1180px;
@@ -908,6 +921,7 @@ table {
 }
 
 #footer_sub {
+  margin-top: 100px;
   width: 100%;
   background: #000;
   height: 37vh;
@@ -1002,6 +1016,9 @@ table {
 
 .community .sub_visual {
   background: url("../img/visual3.jpg") no-repeat center/cover;
+}
+.community .content_banner {
+  background: url("../img/community_banner.jpg") no-repeat center/cover;
 }
 .community .inner .community_search_box {
   display: flex;
@@ -1207,10 +1224,8 @@ table {
   width: 100%;
   height: 100%;
 }
-.member .member_banner {
-  width: 100%;
-  height: 45vh;
-  background: url("../img/member_banner7.jpg") no-repeat center/cover;
+.member .content_banner {
+  background: url("../img/member_banner.jpg") no-repeat center/cover;
 }
 .member .inner {
   width: 1180px;
@@ -1218,7 +1233,7 @@ table {
 }
 .member .inner .member_title {
   margin-top: 100px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   font-size: 50px;
   text-align: center;
   color: #000;
@@ -1431,17 +1446,19 @@ table {
     display: none;
   }
 }
-#gallery {
+.gallery {
   width: 100%;
   height: 100%;
   position: relative;
-  padding: 60px;
 }
-#gallery #searchBox {
+.gallery .content_banner {
+  background: url("../img/gallery_banner.jpg") no-repeat center/cover;
+}
+.gallery .inner .gallery_content #searchBox {
   display: flex;
   justify-content: center;
 }
-#gallery #searchBox input[type=text] {
+.gallery .inner .gallery_content #searchBox input[type=text] {
   padding: 15px;
   border: none;
   background: #555;
@@ -1449,10 +1466,10 @@ table {
   border-radius: 10px;
   font: bold 16px "arial";
 }
-#gallery #searchBox input[type=text]::placeholder {
+.gallery .inner .gallery_content #searchBox input[type=text]::placeholder {
   color: #fff;
 }
-#gallery #searchBox button {
+.gallery .inner .gallery_content #searchBox button {
   border: none;
   padding: 15px;
   margin-left: 10px;
@@ -1462,7 +1479,7 @@ table {
   cursor: pointer;
   font: bold 16px "arial";
 }
-#gallery .wrap {
+.gallery .inner .gallery_content .wrap {
   position: relative;
   width: 100%;
   height: 80%;
@@ -1470,47 +1487,47 @@ table {
   margin-right: auto;
   margin-top: 30px;
 }
-#gallery .wrap .loading {
+.gallery .inner .gallery_content .wrap .loading {
   width: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#gallery .wrap .loading.off {
+.gallery .inner .gallery_content .wrap .loading.off {
   opacity: 0;
 }
-#gallery .wrap .list {
+.gallery .inner .gallery_content .wrap .list {
   width: 100%;
   height: 80vh;
   opacity: 1;
   transform: translateY(100px);
   transition: 1s;
 }
-#gallery .wrap .list.on {
+.gallery .inner .gallery_content .wrap .list.on {
   opacity: 0;
   transform: translateY(0px);
 }
-#gallery .wrap .list .item {
+.gallery .inner .gallery_content .wrap .list .item {
   width: 100%;
   text-align: center;
   font-size: 18px;
   background: #fff;
   height: calc((100% - 30px) / 2);
 }
-#gallery .wrap .list .item a {
+.gallery .inner .gallery_content .wrap .list .item a {
   display: block;
   width: 100%;
   height: 100%;
   display: flex;
 }
-#gallery .wrap .list .item a img {
+.gallery .inner .gallery_content .wrap .list .item a img {
   display: flex;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#gallery aside {
+.gallery .inner .gallery_content aside {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1522,10 +1539,10 @@ table {
   align-items: center;
   z-index: 10;
 }
-#gallery aside div img {
+.gallery .inner .gallery_content aside div img {
   width: 100%;
 }
-#gallery aside span {
+.gallery .inner .gallery_content aside span {
   position: absolute;
   top: 10px;
   right: 40px;
@@ -1685,6 +1702,9 @@ table {
 .location {
   width: 100%;
 }
+.location .content_banner {
+  background: url("../img/location_banner2.jpg") no-repeat center/cover;
+}
 .location #map {
   width: 100%;
   height: 500px;
@@ -1750,11 +1770,10 @@ table {
     margin-bottom: 10px;
   }
 }
-.youtube .inner h1 {
-  font-size: 70px;
-  text-align: center;
-  margin: 50px 0px;
-  font-family: "Lalezar", cursive;
+.youtube .content_banner {
+  background: url("../img/youtube_banner2.jpg") no-repeat center/cover;
+  transform: rotateY(180deg);
+  filter: grayscale(1);
 }
 .youtube .inner .vidList article {
   display: flex;
@@ -1762,6 +1781,9 @@ table {
   border-bottom: 3px solid #bbb;
   padding: 100px 0px;
   position: relative;
+}
+.youtube .inner .vidList article:first-of-type {
+  padding-top: 0px;
 }
 .youtube .inner .vidList article:last-of-type {
   border: none;

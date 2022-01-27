@@ -1,11 +1,10 @@
 .youtube {
+	.content_banner {
+		background: url("../img/youtube_banner2.jpg") no-repeat center/cover;
+		transform: rotateY(180deg);
+		filter: grayscale(1);
+	}
 	.inner {
-		h1 {
-			font-size: 70px;
-			text-align: center;
-			margin: 50px 0px;
-			font-family: "Lalezar", cursive;
-		}
 		.vidList {
 			article {
 				display: flex;
@@ -13,6 +12,9 @@
 				border-bottom: 3px solid #bbb;
 				padding: 100px 0px;
 				position: relative;
+				&:first-of-type {
+					padding-top: 0px;
+				}
 				&:last-of-type {
 					border: none;
 				}
