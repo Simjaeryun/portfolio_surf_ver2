@@ -10,6 +10,7 @@
 			#searchBox {
 				display: flex;
 				justify-content: center;
+				margin-bottom: 50px;
 				input[type="text"] {
 					padding: 15px;
 					border: none;
@@ -104,6 +105,121 @@
 					color: #fff;
 					font-size: 50px;
 					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tabletSize) {
+	.gallery {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		.content_banner {
+			background: url("../img/gallery_banner.jpg") no-repeat center/cover;
+		}
+		.inner {
+			width: 100%;
+			.gallery_content {
+				#searchBox {
+					display: flex;
+					justify-content: center;
+					input[type="text"] {
+						padding: 15px;
+						border: none;
+						background: #555;
+						color: #fff;
+						border-radius: 10px;
+						font: bold 16px "arial";
+					}
+					input[type="text"]::placeholder {
+						color: #fff;
+					}
+					button {
+						border: none;
+						padding: 15px;
+						margin-left: 10px;
+						background: #555;
+						border-radius: 10px;
+						color: #fff;
+						cursor: pointer;
+						font: bold 16px "arial";
+					}
+				}
+				.wrap {
+					position: relative;
+					width: 100%;
+					height: 80%;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 30px;
+					.loading {
+						width: 100px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						&.off {
+							opacity: 0;
+						}
+					}
+					.list {
+						width: 100%;
+						height: 80vh;
+						opacity: 1;
+						transform: translateY(100px);
+						transition: 1s;
+						&.on {
+							opacity: 0;
+							transform: translateY(0px);
+						}
+						.item {
+							width: 100%;
+							text-align: center;
+							font-size: 18px;
+							background: #fff;
+							height: calc((100% - 30px) / 2);
+
+							a {
+								display: block;
+								width: 100%;
+								height: 100%;
+								display: flex;
+								img {
+									display: flex;
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+								}
+							}
+						}
+					}
+				}
+				aside {
+					width: 100%;
+					height: 100vh;
+					position: fixed;
+					left: 0;
+					top: 0;
+					background: rgba(0, 0, 0, 0.8);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					z-index: 10;
+					div {
+						img {
+							width: 100%;
+						}
+					}
+					span {
+						position: absolute;
+						top: 10px;
+						right: 40px;
+						color: #fff;
+						font-size: 50px;
+						cursor: pointer;
+					}
 				}
 			}
 		}

@@ -144,7 +144,7 @@ function galLoading() {
 function swiper() {
     loading.classList.add("off")
     let swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         grid: {
             rows: 2,
         },
@@ -153,6 +153,24 @@ function swiper() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    });
+        breakpoints: {
+
+            540: {
+                slidesPerView: 2,
+                grid: {
+                    rows: 2,
+                },
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 3,
+                grid: {
+                    rows: 2,
+                },
+                spaceBetween: 10,
+            },
+        },
+
+    })
 }
 
