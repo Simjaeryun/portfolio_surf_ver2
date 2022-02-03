@@ -2,6 +2,10 @@ const t_on = document.querySelectorAll(".traffic li")[0],
     t_off = document.querySelectorAll(".traffic li")[1],
     branch_btns = document.querySelectorAll(".branch li");
 
+
+
+
+
 const zoom = true; //줌 가능
 const drag = true; //드래그 가능
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -12,27 +16,32 @@ var options = { //지도를 생성할 때 필요한 기본 옵션
 var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
 
+
+
 var markerOptions = [
     {
-        title: "본점",
-        latlng: new kakao.maps.LatLng(37.5120725, 127.057503),
-        imgSrc: "img/marker1.png",
+        title: "강원도",
+        latlng: new kakao.maps.LatLng(38.02837266155642, 128.71753124030604),
+        imgSrc: "img/marker.png",
         imgSize: new kakao.maps.Size(232, 99),
         imgPos: { offset: new kakao.maps.Point(116, 99) },
+        imgHref: "https://www.flaticon.com/free-icons/location-pin"
     },
     {
-        title: "지점1",
-        latlng: new kakao.maps.LatLng(33.255296, 126.559507),
-        imgSrc: "img/marker2.png",
+        title: "부산",
+        latlng: new kakao.maps.LatLng(35.17906768852956, 129.19975618418863),
+        imgSrc: "img/marker.png",
         imgSize: new kakao.maps.Size(232, 99),
         imgPos: { offset: new kakao.maps.Point(116, 99) },
+        imgHref: "https://www.flaticon.com/free-icons/location-pin"
     },
     {
-        title: "지점2",
-        latlng: new kakao.maps.LatLng(37.616690, 126.716288),
-        imgSrc: "img/marker3.png",
+        title: "제주도",
+        latlng: new kakao.maps.LatLng(33.245678705792436, 126.41166651031791),
+        imgSrc: "img/marker.png",
         imgSize: new kakao.maps.Size(232, 99),
         imgPos: { offset: new kakao.maps.Point(116, 99) },
+        imgHref: "https://www.flaticon.com/free-icons/location-pin"
     }
 ]
 
