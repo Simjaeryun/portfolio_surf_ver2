@@ -147,52 +147,87 @@
 		}
 	}
 }
-
 @media screen and (max-width: $tabletSize) {
 	.member {
-		width: 100%;
-		height: 100%;
-		.member_banner {
-			width: 100%;
-			height: 45vh;
-		}
 		.inner {
 			width: 100%;
 			margin: 0 auto;
-			h1 {
-				text-align: center;
+			.member_title {
+				margin-top: 50px;
+				margin-bottom: 50px;
+				font-size: 70px;
+			}
+			.member_about {
+				display: flex;
+				width: 100%;
+				flex-direction: column-reverse;
+				justify-content: center;
+				align-items: center;
+				padding-bottom: 100px;
+				border-bottom: 2px solid #bbb;
+				.member_about_img {
+					width: 100%;
+					text-align: center;
+				}
+				.member_about_text {
+					margin-top: 25px;
+					width: 100%;
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					h2 {
+						font-size: 40px;
+					}
+					p {
+						font-size: 16px;
+						line-height: 27px;
+						font-family: "poppins";
+						font-weight: bold;
+						color: #999;
+					}
+				}
 			}
 			.member_ceo {
-				height: 100%;
-				display: flex;
+				width: 100%;
+				padding-bottom: 100px;
+				border-bottom: 2px solid #bbb;
 				flex-direction: column;
-				align-items: center;
 				.member_ceo_img {
-					min-width: 380px;
-					min-height: 380px;
-					width: 40%;
-					height: 40%;
+					width: 60%;
+					height: 50vh;
+					object-fit: cover;
 				}
 				.member_ceo_txt {
+					margin-top: 50px;
+					flex-direction: column;
 					text-align: center;
-					height: 30%;
-					font-size: 20px;
+					width: 80%;
+					padding-left: 0px;
+					padding-right: 0px;
+					font-size: 24px;
+					line-height: 35px;
 					.member_ceo_name {
-					}
-					.member_ceo_info {
+						text-align: center;
+						font-size: 60px;
+						margin-bottom: 30px;
 					}
 					.member_ceo_awards {
 						margin-top: 30px;
 						a {
+							color: #666;
+							display: block;
 						}
 					}
 				}
 			}
-			h2 {
-				text-align: center;
-			}
 			.member_profile-box {
+				width: 100%;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				display: none;
 				&.on {
+					display: flex;
 				}
 				.member_profile {
 					position: relative;
@@ -228,14 +263,18 @@
 						text-align: center;
 						opacity: 0;
 						.member_name {
-							font-size: 50px;
+							font-size: 30px;
+							margin-bottom: 20px;
 						}
 						.member_position {
-							font-size: 40px;
+							font-size: 20px;
 						}
 						.member_info {
 							display: none;
 						}
+					}
+					&:hover .member_text {
+						opacity: 1;
 					}
 				}
 			}
