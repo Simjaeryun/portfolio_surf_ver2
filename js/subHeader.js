@@ -1,5 +1,5 @@
 const btnCall = document.querySelector(".btnCall");
-const menuMo = document.querySelector(".header_m_nav");
+const menuMo = document.querySelector(".header_sub_m_nav");
 
 const closeBtns = document.querySelectorAll("section");
 
