@@ -2595,6 +2595,9 @@ body {
     display: none;
   }
 
+  #footer {
+    margin-top: 100px;
+  }
   #footer .inner {
     width: 100%;
     justify-content: space-around;
