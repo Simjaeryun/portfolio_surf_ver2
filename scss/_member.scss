@@ -147,6 +147,7 @@
 		}
 	}
 }
+
 @media screen and (max-width: $tabletSize) {
 	.member {
 		.inner {
@@ -275,6 +276,29 @@
 					}
 					&:hover .member_text {
 						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobileSize) {
+	.member {
+		.inner {
+			width: 100%;
+			margin: 0 auto;
+
+			.member_ceo {
+				.member_ceo_txt {
+					font-size: 20px;
+					line-height: 25px;
+					.member_ceo_name {
+					}
+					.member_ceo_awards {
+						a {
+							font-size: 22px;
+						}
 					}
 				}
 			}
