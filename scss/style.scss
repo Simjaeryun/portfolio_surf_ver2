@@ -101,9 +101,11 @@ body {
 				.visual_img {
 					width: 100%;
 					height: 100%;
+					justify-content: center;
+					margin-bottom: 30px;
 					img {
 						width: 90%;
-						height: 60%;
+						height: 100%;
 						margin-top: 0px;
 						margin-bottom: 30px;
 						margin-right: 0px;

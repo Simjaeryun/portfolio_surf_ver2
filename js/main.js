@@ -3,13 +3,21 @@
 const visualBtn = document.querySelector(".visual_btn");
 const visualPopup = document.querySelector(".visual_popup")
 const visualVideo = visualPopup.querySelector("video");
+const visualImgBtn = document.querySelector(".visual_img_play-btn")
+
+visualImgBtn.addEventListener("click", (e) => {
+    visualPopup.classList.add("on");
+    document.body.style.overflow = "hidden";
+    visualVideo.play();
+})
+
 visualBtn.addEventListener("click", (e) => {
     visualPopup.classList.add("on");
     document.body.style.overflow = "hidden";
+    visualVideo.play();
 })
 
 visualPopup.addEventListener("click", (e) => {
-
     if (!e.target.classList.contains("on")) return;
     visualPopup.classList.remove("on")
     visualVideo.pause();
