@@ -634,6 +634,10 @@ table {
   align-items: center;
   width: 50%;
   height: 20%;
+  filter: grayscale(1);
+}
+#product .inner .wrap .product_logo_box .product_logo.on {
+  filter: grayscale(0);
 }
 #product .inner .wrap .product_logo_box .product_logo.on, #product .inner .wrap .product_logo_box .product_logo:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -641,7 +645,6 @@ table {
 #product .inner .wrap .product_logo_box .product_logo img {
   width: 50%;
   object-fit: cover;
-  filter: grayscale(1);
   cursor: pointer;
 }
 #product .inner .wrap .product_img_box {

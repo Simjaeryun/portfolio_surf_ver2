@@ -45,6 +45,10 @@
 					align-items: center;
 					width: 50%;
 					height: 20%;
+					filter: grayscale(1);
+					&.on {
+						filter: grayscale(0);
+					}
 					&.on,
 					&:hover {
 						box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -52,7 +56,6 @@
 					img {
 						width: 50%;
 						object-fit: cover;
-						filter: grayscale(1);
 						cursor: pointer;
 					}
 				}

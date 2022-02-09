@@ -30,6 +30,56 @@ const productLogo = document.querySelectorAll(".product_logo");
 const productDetailTitle = document.querySelector(".product_detail_title img")
 const productImg = document.querySelector(".product_img_box img")
 
+const productPagination = document.querySelector(".product_pagination_box")
+const productPrevBtn = productPagination.querySelector("a:first-child")
+const productNextBtn = productPagination.querySelector("a:last-child")
+const productPaginationTxt = productPagination.querySelector("span");
+let productNum = 1;
+
+productPrevBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const productLogoOn = document.querySelector(".product_logo.on");
+    const productLogoLast = document.querySelector(".product_logo:last-child")
+    for (const el of productLogo) {
+        el.classList.remove("on");
+    }
+    productNum--;
+    if (productNum < 1) {
+        productLogoLast.classList.add("on")
+        productNum = 10;
+        productPaginationTxt.innerText = `${productNum} / 10`
+        productImg.setAttribute("src", `img/board${productNum}.png`)
+    }
+
+    productLogoOn.previousElementSibling.classList.add("on");
+    productPaginationTxt.innerText = `${productNum} / 10`
+    productImg.setAttribute("src", `img/board${productNum}.png`)
+})
+
+productNextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const productLogoOn = document.querySelector(".product_logo.on");
+    const productLogoFirst = document.querySelector(".product_logo:first-child")
+    for (const el of productLogo) {
+        el.classList.remove("on");
+    }
+    productNum++;
+
+    if (productNum > 10) {
+        productLogoFirst.classList.add("on")
+        productNum = 1;
+        productPaginationTxt.innerText = `${productNum} / 10`
+        productImg.setAttribute("src", `img/board${productNum}.png`)
+    }
+
+    productLogoOn.nextElementSibling.classList.add("on");
+    productPaginationTxt.innerText = `${productNum} / 10`
+    productImg.setAttribute("src", `img/board${productNum}.png`)
+})
+
+
+
+
 productLogo.forEach((el, index) => {
     el.addEventListener("click", e => {
         e.preventDefault();
@@ -38,9 +88,8 @@ productLogo.forEach((el, index) => {
         productImg.setAttribute("src", `img/board${index + 1}.png`)
         for (const el of productLogo) {
             el.classList.remove("on")
-            el.querySelector("img").style.filter = "grayscale(1)"
         }
         e.currentTarget.classList.add("on")
-        e.currentTarget.querySelector("img").style.filter = "grayscale(0)"
+
     })
 });
