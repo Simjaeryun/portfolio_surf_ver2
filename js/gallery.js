@@ -104,19 +104,19 @@ galList.addEventListener("click", e => {
                         `
         pop.innerHTML = pops;
         gallery.append(pop);
+        body.style.overflow = "hidden"
     }
 })
 
 // 생성된 popup창 닫기 
 gallery.addEventListener("click", (e) => {
     e.preventDefault();
-
-    const pop = e.target.closest("div").querySelector("aside")
+    const pop = e.target.closest("section").querySelector("aside")
     if (pop) {
-        const closeBtn = e.target.closest("div").querySelector("aside span")
+        const closeBtn = e.target.closest("section").querySelector("aside span")
         if (e.target === closeBtn) {
             pop.remove();
-            body.style.overflow = "hidden"
+            body.style.overflow = "auto"
         }
     }
 })

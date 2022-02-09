@@ -1,4 +1,22 @@
 
+//Visual
+const visualBtn = document.querySelector(".visual_btn");
+const visualPopup = document.querySelector(".visual_popup")
+const visualVideo = visualPopup.querySelector("video");
+visualBtn.addEventListener("click", (e) => {
+    visualPopup.classList.add("on");
+    document.body.style.overflow = "hidden";
+})
+
+visualPopup.addEventListener("click", (e) => {
+
+    if (!e.target.classList.contains("on")) return;
+    visualPopup.classList.remove("on")
+    visualVideo.pause();
+    document.body.style.overflow = "auto";
+})
+
+
 //Product
 const productLogo = document.querySelectorAll(".product_logo");
 const productDetailTitle = document.querySelector(".product_detail_title img")
