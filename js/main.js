@@ -90,6 +90,26 @@ productLogo.forEach((el, index) => {
             el.classList.remove("on")
         }
         e.currentTarget.classList.add("on")
-
     })
 });
+
+
+// Scroll Event
+const product = document.querySelector("#product .container .inner")
+const productDetailBox = product.querySelector(".product_detail_box")
+const productImgBox = product.querySelector(".product_img_box")
+const productLogoBox = product.querySelector(".product_logo_box")
+
+
+window.addEventListener("scroll", (e) => {
+    console.log(window.scrollY)
+    if (window.scrollY > 300) {
+        productDetailBox.classList.add("animate__bounceInLeft")
+    }
+    if (window.scrollY > 600) {
+        productImgBox.classList.add("animate__bounceInLeft")
+    }
+    if (window.scrollY >= 800) {
+        productLogoBox.classList.add("animate__bounceInLeft")
+    }
+})
