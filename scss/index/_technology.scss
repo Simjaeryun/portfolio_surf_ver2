@@ -53,12 +53,15 @@
 					position: absolute;
 					width: 400px;
 					height: 450px;
-					top: 50%;
 					transform: translateY(-50%);
 					right: 0px;
 					padding: 30px;
 					text-align: center;
 					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+					opacity: 0;
+					&.animate__backInRight {
+						opacity: 1;
+					}
 					.tec_title {
 						width: 100%;
 						img {

@@ -121,7 +121,7 @@ window.addEventListener("scroll", (e) => {
         productDetailBox.classList.add("animate__fadeInRight")
     }
     if (window.scrollY >= 1600) {
-        techTxt.classList.add("animate__rotateInDownRight")
+        techTxt.classList.add("animate__fadeInRight")
     }
 })
 
