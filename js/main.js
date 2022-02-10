@@ -118,6 +118,11 @@ if (window.scrollY > 400) {
     productImgBox.classList.add("animate__zoomIn")
     productDetailBox.classList.add("animate__fadeInRight")
 }
+if (window.scrollY >= 1600) {
+    techTxt.classList.add("animate__fadeInRight")
+}
+
+
 
 window.addEventListener("scroll", (e) => {
     console.log(window.scrollY)
