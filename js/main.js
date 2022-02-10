@@ -40,7 +40,7 @@ const productPagination = document.querySelector(".product_pagination_box")
 const productPrevBtn = productPagination.querySelector("a:first-child")
 const productNextBtn = productPagination.querySelector("a:last-child")
 const productPaginationTxt = productPagination.querySelector("span");
-let productNum = 1;
+let productNum = parseInt(productPaginationTxt.innerHTML);
 
 productPrevBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -53,12 +53,12 @@ productPrevBtn.addEventListener("click", (e) => {
     if (productNum < 1) {
         productLogoLast.classList.add("on")
         productNum = 3;
-        productPaginationTxt.innerText = `${productNum} / 3`
+        productPaginationTxt.innerText = `${productNum}`
         productImg.setAttribute("src", `img/board${productNum}.png`)
     }
 
     productLogoOn.previousElementSibling.classList.add("on");
-    productPaginationTxt.innerText = `${productNum} / 3`
+    productPaginationTxt.innerText = `${productNum}`
     productImg.setAttribute("src", `img/board${productNum}.png`)
 })
 
@@ -74,21 +74,19 @@ productNextBtn.addEventListener("click", (e) => {
     if (productNum > 3) {
         productLogoFirst.classList.add("on")
         productNum = 1;
-        productPaginationTxt.innerText = `${productNum} / 3`
+        productPaginationTxt.innerText = `${productNum}`
         productImg.setAttribute("src", `img/board${productNum}.png`)
     }
 
     productLogoOn.nextElementSibling.classList.add("on");
-    productPaginationTxt.innerText = `${productNum} / 3`
+    productPaginationTxt.innerText = `${productNum}`
     productImg.setAttribute("src", `img/board${productNum}.png`)
 })
-
-
-
 
 productLogo.forEach((el, index) => {
     el.addEventListener("click", e => {
         e.preventDefault();
+        productNum = index + 1
         let imgSrc = e.currentTarget.querySelector("img").getAttribute("src")
         productDetailTitle.setAttribute("src", imgSrc)
         productImg.setAttribute("src", `img/board${index + 1}.png`)
@@ -96,6 +94,7 @@ productLogo.forEach((el, index) => {
             el.classList.remove("on")
         }
         e.currentTarget.classList.add("on")
+        productPaginationTxt.innerHTML = `<span>${productNum}</span>`
     })
 });
 
