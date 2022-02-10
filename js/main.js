@@ -94,22 +94,34 @@ productLogo.forEach((el, index) => {
 });
 
 
-// Scroll Event
+// product Scroll Event
 const product = document.querySelector("#product .container .inner")
 const productDetailBox = product.querySelector(".product_detail_box")
 const productImgBox = product.querySelector(".product_img_box")
 const productLogoBox = product.querySelector(".product_logo_box")
 
+//technology Scroll Event
+const tech = document.querySelector("#technology .wrap")
+const techColumnTxt = tech.querySelector(".tec_column_txt");
+const techVideo = tech.querySelector(".tec_video")
+const techTxt = tech.querySelector(".tec_txt")
+
+
+if (window.scrollY > 400) {
+    productLogoBox.classList.add("animate__fadeInLeft")
+    productImgBox.classList.add("animate__zoomIn")
+    productDetailBox.classList.add("animate__fadeInRight")
+}
 
 window.addEventListener("scroll", (e) => {
     console.log(window.scrollY)
-    if (window.scrollY > 300) {
-        productDetailBox.classList.add("animate__bounceInLeft")
+    if (window.scrollY > 400) {
+        productLogoBox.classList.add("animate__fadeInLeft")
+        productImgBox.classList.add("animate__zoomIn")
+        productDetailBox.classList.add("animate__fadeInRight")
     }
-    if (window.scrollY > 600) {
-        productImgBox.classList.add("animate__bounceInLeft")
-    }
-    if (window.scrollY >= 800) {
-        productLogoBox.classList.add("animate__bounceInLeft")
+    if (window.scrollY >= 1600) {
+        techTxt.classList.add("animate__rotateInDownRight")
     }
 })
+
