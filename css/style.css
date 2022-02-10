@@ -2092,6 +2092,9 @@ table {
     cursor: pointer;
   }
 }
+.join {
+  padding-top: 145px;
+}
 .join .inner h2 {
   font: bold 18px/1 "arial";
   color: #555;
@@ -2112,6 +2115,12 @@ table {
 }
 .join .inner .agreement label[for=agree] {
   font-size: 12px;
+}
+.join .inner .agreement p {
+  color: hotpink;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 .join .inner table {
   border-top: 2px solid #999;
@@ -2138,10 +2147,16 @@ table {
   width: 150px;
   height: 40px;
   border: none;
-  background: tomato;
+  background: #444;
   font: bold 14px/1 "arial";
   color: #fff;
   margin: 0 10px;
+  cursor: pointer;
+}
+.join .inner table tr th input[type=submit]:hover,
+.join .inner table tr th input[type=reset]:hover {
+  background: #bbb;
+  color: #fff;
 }
 .join .inner table tr td {
   border-bottom: 1px solid #bbb;
@@ -2150,11 +2165,9 @@ table {
 .join .inner table tr td input[type=text],
 .join .inner table tr td input[type=password],
 .join .inner table tr td input[type=email] {
-  width: 30%;
-  height: 30%;
-  border: 1px solid #bbb;
-  background: lightcyan;
-  padding-left: 20px;
+  width: 100%;
+  border: none;
+  padding: 10px;
 }
 .join .inner table tr td input[type=checkbox],
 .join .inner table tr td input[type=radio] {
@@ -2163,81 +2176,24 @@ table {
 .join .inner table tr td label {
   margin-right: 30px;
 }
-.join .inner table tr td select {
-  width: 20%;
-  height: 30px;
-  border: 1px solid #bbb;
-  background: #eeffff;
-  padding-left: 20px;
-}
 .join .inner table tr td textarea#aboutMe {
   width: 80%;
   height: 100px;
   border: 1px solid #bbb;
-  background: #eeffff;
   resize: none;
   padding: 20px;
 }
-.join .inner table tr td .hobby_txt,
-.join .inner table tr td .gender_txt {
-  font: 12px/1 "arial";
+.join .inner table tr td p {
   color: hotpink;
-  margin-top: 10px;
-  display: none;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 1200px) {
-  .join .sub_viual {
-    background: pink;
-  }
-  .join .inner table tr:last-child th {
-    display: block;
+  .join .inner {
     width: 100%;
-  }
-  .join .inner table tr th {
-    display: none;
-  }
-  .join .inner table tr td input[type=text],
-.join .inner table tr td input[type=password],
-.join .inner table tr td input[type=email] {
-    width: 50%;
-  }
-  .join .inner table tr td select {
-    width: 30%;
-    padding-left: 5px;
-  }
-  .join .inner table tr td textarea#aboutMe {
-    width: 90%;
-  }
-  .join .inner table tr td .hobby_txt,
-.join .inner table tr td .gender_txt {
-    display: block;
-  }
-}
-@media screen and (max-width: 539px) {
-  .join .sub_viual {
-    background: pink;
-  }
-  .join .inner table tr th input[type=submit],
-.join .inner table tr th input[type=reset] {
-    width: 45%;
-    margin: 0.5%;
-  }
-  .join .inner table tr td input[type=text],
-.join .inner table tr td input[type=password],
-.join .inner table tr td input[type=email] {
-    width: 100%;
-  }
-  .join .inner table tr td label {
-    display: block;
-    margin-right: 0px;
-  }
-  .join .inner table tr td select#company {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .join .inner table tr td textarea#aboutMe {
-    width: 100%;
+    padding: 10px;
   }
 }
 .location {

@@ -1,4 +1,5 @@
 .join {
+	padding-top: 145px;
 	.inner {
 		h2 {
 			font: bold 18px/1 "arial";
@@ -20,6 +21,12 @@
 			margin-bottom: 70px;
 			label[for="agree"] {
 				font-size: 12px;
+			}
+			p {
+				color: hotpink;
+				font-size: 12px;
+				margin-top: 5px;
+				margin-left: 10px;
 			}
 		}
 
@@ -50,10 +57,15 @@
 						width: 150px;
 						height: 40px;
 						border: none;
-						background: tomato;
+						background: #444;
 						font: bold 14px/1 "arial";
 						color: #fff;
 						margin: 0 10px;
+						cursor: pointer;
+						&:hover {
+							background: #bbb;
+							color: #fff;
+						}
 					}
 				}
 
@@ -63,11 +75,9 @@
 					input[type="text"],
 					input[type="password"],
 					input[type="email"] {
-						width: 30%;
-						height: 30%;
-						border: 1px solid #bbb;
-						background: lightcyan;
-						padding-left: 20px;
+						width: 100%;
+						border: none;
+						padding: 10px;
 					}
 					input[type="checkbox"],
 					input[type="radio"] {
@@ -76,28 +86,19 @@
 					label {
 						margin-right: 30px;
 					}
-					select {
-						width: 20%;
-						height: 30px;
-						border: 1px solid #bbb;
-						background: #eeffff;
-						padding-left: 20px;
-					}
 
 					textarea#aboutMe {
 						width: 80%;
 						height: 100px;
 						border: 1px solid #bbb;
-						background: #eeffff;
 						resize: none;
 						padding: 20px;
 					}
-					.hobby_txt,
-					.gender_txt {
-						font: 12px/1 "arial";
+					p {
 						color: hotpink;
-						margin-top: 10px;
-						display: none;
+						font-size: 12px;
+						margin-top: 5px;
+						margin-left: 10px;
 					}
 				}
 			}
@@ -107,85 +108,9 @@
 
 @media screen and (max-width: $tabletSize) {
 	.join {
-		.sub_viual {
-			background: pink;
-		}
 		.inner {
-			table {
-				tr {
-					&:last-child {
-						th {
-							display: block;
-							width: 100%;
-						}
-					}
-					th {
-						display: none;
-					}
-
-					td {
-						input[type="text"],
-						input[type="password"],
-						input[type="email"] {
-							width: 50%;
-						}
-
-						select {
-							width: 30%;
-							padding-left: 5px;
-						}
-
-						textarea#aboutMe {
-							width: 90%;
-						}
-						.hobby_txt,
-						.gender_txt {
-							display: block;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and(max-width:$mobileSize) {
-	.join {
-		.sub_viual {
-			background: pink;
-		}
-		.inner {
-			table {
-				tr {
-					th {
-						input[type="submit"],
-						input[type="reset"] {
-							width: 45%;
-							margin: 0.5%;
-						}
-					}
-
-					td {
-						input[type="text"],
-						input[type="password"],
-						input[type="email"] {
-							width: 100%;
-						}
-						label {
-							display: block;
-							margin-right: 0px;
-						}
-						select#company {
-							width: 100%;
-							margin-top: 10px;
-						}
-
-						textarea#aboutMe {
-							width: 100%;
-						}
-					}
-				}
-			}
+			width: 100%;
+			padding: 10px;
 		}
 	}
 }

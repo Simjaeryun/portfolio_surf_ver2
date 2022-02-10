@@ -22,10 +22,6 @@ btnSubmit.addEventListener("click", e => {
     if (!isEmail("email")) {
         e.preventDefault();
     }
-    if (!isSelect("company")) {
-        e.preventDefault()
-    }
-
     //수정해야함 
     if (!isAgree("agree")) {
         e.preventDefault()
@@ -114,27 +110,6 @@ function isCheck(name) {
         inputs[0].closest("td").append(errMsg);
 
         //리턴값으로 false 반환 
-        return false;
-    }
-}
-
-function isSelect(name) {
-    let sel = form.querySelector(`[name=${name}]`);
-    let sel_index = sel.options.selectedIndex;
-    let val = sel[sel_index].value;
-
-    if (val !== "") {
-        const errMsgs = sel.closest("td").querySelectorAll("p");
-        if (errMsgs.length > 1) sel.closest("td").querySelector("p").firstElementChild.remove();
-        return true;
-    } else {
-        const errMsgs = sel.closest("td").querySelectorAll("p");
-        if (errMsgs.length > 1) sel.closest("td").querySelector("p").remove();
-
-        const errMsg = document.createElement("p");
-        errMsg.append("항목을 선택해 주세요");
-        sel.closest("td").append(errMsg);
-
         return false;
     }
 }
