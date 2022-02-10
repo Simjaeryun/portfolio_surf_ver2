@@ -14,12 +14,12 @@ const body = document.querySelector("body")
 const loading = document.querySelector(".loading")
 callData(url);
 
-// input Search버튼 클릭 이벤트
+
 btnSearch.addEventListener("click", e => {
-    //input요소에 value값을 가져옴
+    loading.classList.remove("off")
     let tag = input.value;
-    tag = tag.trim(); // 공백제거
-    //키워드를 통한 이미지를 요청하는 주소 
+    tag = tag.trim();
+
     const url = `${flickr_base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
     if (tag != "") {
         callData(url);
@@ -31,13 +31,10 @@ btnSearch.addEventListener("click", e => {
     }
 });
 
-//input Enter 입력 이벤트
 input.addEventListener("keypress", e => {
     if (e.keyCode == 13) {
-        //input요소에 value값을 가져옴
         let tag = input.value;
         tag = tag.trim();
-        //키워드를 통한 이미지를 요청하는 주소 
         const url = `${flickr_base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
         if (tag != "") {
             callData(url);
@@ -58,6 +55,7 @@ function callData(url) {
             if (items.length > 0) {
                 createList(items);
                 galLoading();
+                console.log(items.length);
             } else {
                 loading.classList.add("off");
                 console.log("검색하신 이미지의 데이터가 없습니다");
@@ -87,8 +85,6 @@ function createList(items) {
          `;
     })
     galList.innerHTML = htmls;
-    //gallery.append(prevBtn);
-    //gallery.append(nextBtn)
 }
 
 // 이미지 클릭시 popup창 생성
@@ -122,24 +118,20 @@ gallery.addEventListener("click", (e) => {
 })
 
 
-
-//count가 왜 len보다 1이작은지 이유를 모름.
-//img가 다 불러와지면 isoLayout 함수 실행
 function galLoading() {
     const imgs = galList.querySelectorAll("img");
     const len = imgs.length;
-    let count = 1;
+    let count = 0;
     for (let el of imgs) {
         el.onload = () => {
             count++;
-            if (count + 1 == len) {
+            if (count == len) {
                 swiper()
             }
         }
     }
 
 }
-
 
 function swiper() {
     loading.classList.add("off")
