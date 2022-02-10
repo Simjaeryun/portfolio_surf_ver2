@@ -11,6 +11,12 @@ visualImgBtn.addEventListener("click", (e) => {
     visualVideo.play();
 })
 
+visualBtn.addEventListener("mouseenter", () => {
+    visualBtn.classList.add("animate__heartBeat")
+})
+visualBtn.addEventListener("mouseleave", () => {
+    visualBtn.classList.remove("animate__heartBeat")
+})
 visualBtn.addEventListener("click", (e) => {
     visualPopup.classList.add("on");
     document.body.style.overflow = "hidden";
@@ -46,13 +52,13 @@ productPrevBtn.addEventListener("click", (e) => {
     productNum--;
     if (productNum < 1) {
         productLogoLast.classList.add("on")
-        productNum = 10;
-        productPaginationTxt.innerText = `${productNum} / 10`
+        productNum = 3;
+        productPaginationTxt.innerText = `${productNum} / 3`
         productImg.setAttribute("src", `img/board${productNum}.png`)
     }
 
     productLogoOn.previousElementSibling.classList.add("on");
-    productPaginationTxt.innerText = `${productNum} / 10`
+    productPaginationTxt.innerText = `${productNum} / 3`
     productImg.setAttribute("src", `img/board${productNum}.png`)
 })
 
@@ -65,15 +71,15 @@ productNextBtn.addEventListener("click", (e) => {
     }
     productNum++;
 
-    if (productNum > 10) {
+    if (productNum > 3) {
         productLogoFirst.classList.add("on")
         productNum = 1;
-        productPaginationTxt.innerText = `${productNum} / 10`
+        productPaginationTxt.innerText = `${productNum} / 3`
         productImg.setAttribute("src", `img/board${productNum}.png`)
     }
 
     productLogoOn.nextElementSibling.classList.add("on");
-    productPaginationTxt.innerText = `${productNum} / 10`
+    productPaginationTxt.innerText = `${productNum} / 3`
     productImg.setAttribute("src", `img/board${productNum}.png`)
 })
 
