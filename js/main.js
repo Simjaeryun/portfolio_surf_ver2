@@ -55,11 +55,13 @@ productPrevBtn.addEventListener("click", (e) => {
         productNum = 3;
         productPaginationTxt.innerText = `${productNum}`
         productImg.setAttribute("src", `img/board${productNum}.png`)
+        productDetailTitle.setAttribute("src", `img/surf${productNum}.png`)
     }
 
     productLogoOn.previousElementSibling.classList.add("on");
     productPaginationTxt.innerText = `${productNum}`
     productImg.setAttribute("src", `img/board${productNum}.png`)
+    productDetailTitle.setAttribute("src", `img/surf${productNum}.png`)
 })
 
 productNextBtn.addEventListener("click", (e) => {
@@ -76,11 +78,13 @@ productNextBtn.addEventListener("click", (e) => {
         productNum = 1;
         productPaginationTxt.innerText = `${productNum}`
         productImg.setAttribute("src", `img/board${productNum}.png`)
+        productDetailTitle.setAttribute("src", `img/surf${productNum}.png`)
     }
 
     productLogoOn.nextElementSibling.classList.add("on");
     productPaginationTxt.innerText = `${productNum}`
     productImg.setAttribute("src", `img/board${productNum}.png`)
+    productDetailTitle.setAttribute("src", `img/surf${productNum}.png`)
 })
 
 productLogo.forEach((el, index) => {
